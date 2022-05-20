@@ -89,6 +89,9 @@
                         }
                         alert('求解成功！');
                     } else {
+                        for (let i = 0; i < a.length; ++i) {
+                            a[i].disabled = false;
+                        }
                         alert('无解！');
                     }
                 }
