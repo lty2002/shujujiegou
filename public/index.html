@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数独求解器</title>
+    <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="sto">
+                <table class="table table-bordered">
+                    <tbody class="border">
+                    <tr>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+                            <!--                            <select class="form-control form-control-sm">-->
+                            <!--                                <option value="1">1</option>-->
+                            <!--                                <option value="2">2</option>-->
+                            <!--                                <option value="3">3</option>-->
+                            <!--                                <option value="4">4</option>-->
+                            <!--                                <option value="5">5</option>-->
+                            <!--                                <option value="6">6</option>-->
+                            <!--                                <option value="7">7</option>-->
+                            <!--                                <option value="8">8</option>-->
+                            <!--                                <option value="9">9</option>-->
+                            <!--                                <option selected value="."></option>-->
+                            <!--                            </select>-->
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                    </tr>
+                    <tr class="top-line">
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                    </tr>
+                    <tr class="top-line">
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td class="left-line">
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                        <td>
+                            <input class="form-control form-control-sm" type="text" value="" maxlength="1">
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="rounded mx-auto d-block">
+            <button id="setEmpty" type="button" class="btn btn-primary">清空</button>
+            <button id="query" type="button" class="btn btn-primary">查询</button>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('setEmpty').onclick = function () {
+        if (confirm('是否清空已填写的数字？')) {
+            let a = document.getElementsByTagName('input');
+            for (let i in a) {
+                a[i].value = '';
+                a[i].disabled = false;
+            }
+        }
+    }
+
+    document.getElementById('query').onclick = function () {
+        let a = document.getElementsByTagName('input');
+        // console.log(a.length);
+        let sto = [];
+        for (let i = 0; i < a.length; ++i) {
+            // a[i].value
+            // console.log(i, a[i].value);
+            sto.push((a[i].value == '') ? '.' : a[i].value);
+            if (a[i].value != '' && a[i].value >= 0 && a[i].value <= 9) {
+                a[i].disabled = true;
+            }
+        }
+        let s = sto.join('');
+        if (verify(s) && confirm('是否开始寻找答案？')) {
+            $.post({
+                url: '/solve',
+                data: s,
+                success: function (res) {
+                    if (res.length == 81) {
+                        for (let i = 0; i < a.length; ++i) {
+                            a[i].value = res[i];
+                        }
+                        alert('求解成功！');
+                    } else {
+                        alert('无解！');
+                    }
+                }
+            })
+        } else {
+            for (let i = 0; i < a.length; ++i) {
+                a[i].disabled = false;
+            }
+            alert('输入数据有误，请修正后重试。');
+        }
+    }
+
+    function verify(s) {
+        console.log(s);
+        if (s.length != 81) {
+            return false;
+        }
+        row = new Array(9);
+        col = new Array(9);
+        cell = [new Array(3), new Array(3), new Array(3)];
+        for (let i = 0; i < 9; ++i) {
+            for (let j = 0; j < 9; ++j) {
+                if (s[i * 9 + j] == '.') {
+                    continue;
+                }
+                if (s[i * 9 + j] > 9 || s[i * 9 + j] < 1) {
+                    return false;
+                }
+                let v = 1 << (s[i * 9 + j] - 0)
+                if (((row[i] | col[j] | cell[parseInt(i / 3)][parseInt(j / 3)]) & v) != 0) {
+                    return false;
+                }
+                row[i] |= v;
+                col[j] |= v;
+                cell[parseInt(i / 3)][parseInt(j / 3)] |= v;
+            }
+        }
+        return true;
+    }
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+.sto {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+    border-radius: 0.25rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+}
+
+.sto-table {
+    width: 100%;
+}
+
+.table .border {
+    border: #4a4a4a 2px solid !important;
+}
+
+.table td {
+    padding: 0;
+}
+
+.table .left-line {
+    border-left: #4a4a4a 2px solid;
+}
+
+.table .top-line td {
+    border-top: #4a4a4a 2px solid;
+}
+
+.form-control-sm {
+    /*border: none !important;*/
+    /*padding: 0;*/
+    /*font-size: 2rem;*/
+}

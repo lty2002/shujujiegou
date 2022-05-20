@@ -1,0 +1,29 @@
+/*
+    func verify(s string) bool {
+	if len(s) != 81 {
+		return false
+	}
+	row := [9]int{}
+	col := [9]int{}
+	cell := [3][3]int{}
+	for i := 0; i < 9; i++ {
+		for j := 0; j < 9; j++ {
+			if s[i*9+j] == '.' {
+				continue
+			}
+			if s[i*9+j] > '9' || s[i*9+j] < '0' {
+				return false
+			}
+			v := 1 << (s[i*9+j] - '0')
+			if (row[i]&v)|(col[j]&v)|(cell[i/3][j/3]&v) != 0 {
+				return false
+			}
+			row[i] |= v
+			col[j] |= v
+			cell[i/3][j/3] |= v
+		}
+	}
+	return true
+}
+
+     */
